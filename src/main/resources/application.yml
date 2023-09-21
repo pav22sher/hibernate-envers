@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/envers
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      org:
+        hibernate:
+          envers:
+            audit_table_prefix: hist_
+            audit_table_suffix: _audit
+    hibernate:
+      ddl-auto: create-drop #none
